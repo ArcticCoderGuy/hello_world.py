@@ -1,2 +1,2 @@
 bicycles = ['Trek', 'Cannondale', 'Redline', 'Specialized']
-print(bicycles)
+print(bicycles[0].title())
