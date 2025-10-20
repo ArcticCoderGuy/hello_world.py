@@ -1,2 +1,2 @@
-bicycels = [´Trek´,'Cannondale', 'Redline', 'Specialized']
+bicycles = ['Trek', 'Cannondale', 'Redline', 'Specialized']
 print(bicycles)
