@@ -1,2 +1,3 @@
 bicycles = ['Trek', 'Cannondale', 'Redline', 'Specialized']
-print(bicycles[0].title())
+for bike in bicycles:
+    print(bike.title())
