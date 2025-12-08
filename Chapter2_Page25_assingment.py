@@ -19,4 +19,17 @@ def message_2():
 print(message_2())
 
 
-    
+def greet(name):
+    """ chapter 1 assignment v4.0 """
+    return f"Hello, {name.title()}!" 
+
+print(greet("Markus"))
+
+
+def introduce(name, age):
+    """ chapter 1 assignment v5.0 """
+    return f"My name is {name} And I am {age} years"
+
+print(introduce("Markus" , 50))
+   
+   
