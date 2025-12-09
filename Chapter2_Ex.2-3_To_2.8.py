@@ -39,7 +39,7 @@ print(message)
 
 # 2-7: stripping_names.py
 
-name = "\t  \n  Markus Kaprio  \t\n" # /t/n from pag page 22
+name = "\t  \n  Markus Kaprio  \t\n" # /t/n from page 22
 
 print("Raw name:")
 print(name)
@@ -63,3 +63,5 @@ filename = "python_notes.txt"
 clean_name = filename.removesuffix(".txt")
 
 print(clean_name)
+
+
