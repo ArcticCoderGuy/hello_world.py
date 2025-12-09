@@ -23,7 +23,7 @@ print(f"Gifts[-1] is the last item in the list:\n\t{gifts[-1]}")
 
 gifts = ["Playstation 2", "Trip to Hawai", "Lobster dinner", "New Laptop", "New Phone"]
 
-message = f"My Nr1 wish is to get a {gifts[-1].title()}."
+message = f"\nMy Nr1. wish is to get a {gifts[-1].title()}."
 print(message)
 
 print("\nMy full wishlist:")
@@ -33,7 +33,9 @@ print(f"\t3. {gifts[2]}")
 print(f"\t4. {gifts[3]}")
 print(f"\t5. {gifts[4]}")
 
-# Question for the teacher from Markus: What is the best "Python-way" to indent multiple lines like above? 1 space under each line ?
+# Question for the teacher from Markus: What is the best "Python-way" to indent multiple lines like above ? 1 space under each line or what ? I want to become a devs-guy that does the most Robust code possible.
+
+
 
 
 
