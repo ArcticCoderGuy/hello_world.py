@@ -6,7 +6,7 @@ bicycles = ['car', 'building', 'boat', 'this stuff is just too easy...']
 print(bicycles)
 
 
-#From pages 22,34- 35 Just for fun stuff
+#From pages 22,34-35 Just for fun stuff
 
 
 gifts = ["Playstation 2", "Trip to Hawai", "Lobster dinner", "New Laptop", "New iPhone 10"]
@@ -14,7 +14,7 @@ gifts = ["Playstation 2", "Trip to Hawai", "Lobster dinner", "New Laptop", "New 
 message = f"My Nr.1 wish is to get a {gifts[-1].title()}"
 print(message)
 
-print(f"Gifts[-1] is the last item in the list:\n\t{gifts[-1]}")
+print(f"\ngifts[-1] is the last item in the list:\n\t{gifts[-1]}")
 
 
 
@@ -23,7 +23,7 @@ print(f"Gifts[-1] is the last item in the list:\n\t{gifts[-1]}")
 
 gifts = ["Playstation 2", "Trip to Hawai", "Lobster dinner", "New Laptop", "New Phone"]
 
-message = f"\nMy Nr1. wish is to get a {gifts[-1].title()}."
+message = f"\nMy Nr.1 wish is to get a {gifts[-1].title()}."
 print(message)
 
 print("\nMy full wishlist:")
@@ -37,5 +37,24 @@ print(f"\t5. {gifts[4]}")
 
 
 
+# Just wanted to experiment with list methods a bit more, as a function
 
+def build_wishlist_messages (gifts: list[str]) ->  tuple[str, str]:
+    
+    """ Builds two messages of wishlists 
+    - main message 
+    - explanatory message Gifts[-1]-index
+    - Also learn the difference where one uses Print as a script or as a function return value. """
 
+    main_message = f"\nMy Nr.1 wish is to get a {gifts[-1].title()}."
+    info_message = f"\nGifts[-1] is the last item in the list:\n\t{gifts[-1]}"
+    return main_message, info_message
+
+gifts = ["Playstation 2", "Trip to Hawai", "Lobster dinner", "New Laptop", "New iPhone10"]
+
+message, debug_info = build_wishlist_messages(gifts)
+
+print(message)
+print(debug_info)
+
+     
