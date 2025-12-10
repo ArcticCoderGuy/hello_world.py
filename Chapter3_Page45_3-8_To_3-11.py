@@ -60,7 +60,7 @@ print(debug_info)
 
 
 
-#Page 37 short example of list modification with .append()-command + some print formatting and a for-loop.
+#Page 37-40 short example of list modification with .append()-command + some print formatting and a for-loop + .pop()-command.
 
 Great_Buildings = []
 
@@ -68,11 +68,18 @@ Great_Buildings.append('Burj Khalifa')
 Great_Buildings.append('Shanghai Tower')
 Great_Buildings.append('Raadenhammas in Espoo')
 
-print(f"\t- \nThe list of Great Buildings: ")
+print(f"\t- \nThe list of Great Buildings:")
 
 print(f"\t ")
 
 for building in Great_Buildings:
     print(f"\t {building}")
+    
+
+first_visited = Great_Buildings.pop(2)   
+print(f"\t- \nThe frst building I visited was {first_visited.title()} when I was 8 years old.")   
+
+    
+        
     
     
