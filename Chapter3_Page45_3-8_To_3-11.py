@@ -57,4 +57,20 @@ message, debug_info = build_wishlist_messages(gifts)
 print(message)
 print(debug_info)
 
-     
+
+
+
+#Page 37 short example of list modification with .append()-command + some print formatting and a for-loop.
+
+Great_Buildings = []
+
+Great_Buildings.append('Burj Khalifa')
+Great_Buildings.append('Shanghai Tower')
+Great_Buildings.append('Raadenhammas in Espoo')
+
+print(f"\t\nThe list of Great Buildings: ")
+
+for building in Great_Buildings:
+    print(f"\t- {building}")
+    
+    
