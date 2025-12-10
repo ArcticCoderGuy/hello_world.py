@@ -68,9 +68,11 @@ Great_Buildings.append('Burj Khalifa')
 Great_Buildings.append('Shanghai Tower')
 Great_Buildings.append('Raadenhammas in Espoo')
 
-print(f"\t\nThe list of Great Buildings: ")
+print(f"\t- \nThe list of Great Buildings: ")
+
+print(f"\t ")
 
 for building in Great_Buildings:
-    print(f"\t- {building}")
+    print(f"\t {building}")
     
     
