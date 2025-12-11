@@ -133,3 +133,19 @@ print(places)
 
     
     
+    # 3-9: Dinner Guests
+    
+    
+
+guests = ["Albert Einstein", "Nikola Tesla", "Marie Curie", "Ada Lovelace"]
+
+print("Guest list:")
+for guest in guests:
+    print(f"\t- {guest}")
+
+
+print(f"\nI am inviting {len(guests)} people to dinner.")
+
+
+
+
