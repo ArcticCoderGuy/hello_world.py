@@ -77,9 +77,9 @@ for building in Great_Buildings:
     
 
 first_visited = Great_Buildings.pop(2)   
-print(f"\t \n- The frst building I visited was {first_visited.title()} when I was 8 years old.")   
+print(f"\t \n- The first building I visited was {first_visited.title()} when I was 8 years old.")   
 
     
-        
+ #Assigmetns 3-8   
     
     
