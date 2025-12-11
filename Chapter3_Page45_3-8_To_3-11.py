@@ -215,5 +215,7 @@ print(languages)
 print(f"\nLopuksi listassa on {len(languages)} ohjelmointikieltä.")
 
 
+
 # 3-11: Intentional Errors
 
+# The errors were created and fixed in the codes previsously. I will not repeat them here and move to Chapter 4.
