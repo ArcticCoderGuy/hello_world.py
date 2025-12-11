@@ -80,6 +80,56 @@ first_visited = Great_Buildings.pop(2)
 print(f"\t \n- The first building I visited was {first_visited.title()} when I was 8 years old.")   
 
     
- #Assigmetns 3-8   
+ #Assignment  3-8 
+ 
+   # 3-8: Seeing the World
+
+places = [
+    "Tokyo",
+    "Ylläs",
+    "Dubai",
+    "New York",
+    "Reykjavik",
+]
+
+#  
+print("Original list:")
+print(places)
+
+#
+print("\nSorted (alphabetical, does NOT change the original):")
+print(sorted(places))
+
+
+print("\nStill original list:")
+print(places)
+
+
+print("\nSorted (reverse alphabetical, does NOT change the original):")
+print(sorted(places, reverse=True))
+
+print("\nStill original list again:")
+print(places)
+
+
+places.reverse()
+print("\nAfter reverse():")
+print(places)
+
+
+places.reverse()
+print("\nAfter reverse() again (back to original order):")
+print(places)
+
+
+places.sort()
+print("\nAfter sort() (alphabetical, CHANGES the list):")
+print(places)
+
+
+places.sort(reverse=True)
+print("\nAfter sort(reverse=True) (reverse alphabetical, CHANGES the list):")
+print(places)
+
     
     
