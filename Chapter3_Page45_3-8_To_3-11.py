@@ -149,3 +149,69 @@ print(f"\nI am inviting {len(guests)} people to dinner.")
 
 
 
+# 3-10: Every Function
+
+
+languages = ["Python", "Rust", "C", "JavaScript"]
+
+print("Alkuperäinen lista:")
+print(languages)
+
+
+print("\nappend(): lisätään Go listan loppuun")
+languages.append("Go")
+print(languages)
+
+#
+print("\ninsert(): lisätään TypeScript indeksin 1 kohdalle")
+languages.insert(1, "TypeScript")
+print(languages)
+
+
+print("\ndel: poistetaan indeksin 2 alkio pysyvästi")
+del languages[2]
+print(languages)
+
+poistaa ja PALAUTTAA viimeisen alkion (tai indeksin mukaan)
+print("\npop(): poistetaan ja talletetaan listan viimeinen alkio")
+popped_language = languages.pop()
+print(f"Poistettu kieli: {popped_language}")
+print("Lista nyt:")
+print(languages)
+
+
+print("\nremove(): poistetaan 'TypeScript' nimen perusteella")
+languages.remove("TypeScript")
+print(languages)
+
+# sorted() – palauttaa UUDEN, väliaikaisesti lajitellun listan
+print("\nsorted(): väliaikainen lajittelu aakkosjärjestykseen")
+print(sorted(languages))
+print("Alkuperäinen lista ei muuttunut:")
+print(languages)
+
+# sorted(..., reverse=True) – väliaikainen lajittelu käänteisesti
+print("\nsorted(..., reverse=True): väliaikainen lajittelu käänteiseen aakkosjärjestykseen")
+print(sorted(languages, reverse=True))
+print("Alkuperäinen lista edelleen samassa järjestyksessä:")
+print(languages)
+
+# sort() – lajittelee listan pysyvästi
+print("\nsort(): pysyvä lajittelu aakkosjärjestykseen")
+languages.sort()
+print(languages)
+
+# sort(reverse=True) – pysyvä lajittelu käänteiseen aakkosjärjestykseen
+print("\nsort(reverse=True): pysyvä lajittelu käänteiseen aakkosjärjestykseen")
+languages.sort(reverse=True)
+print(languages)
+
+# reverse() – kääntää listan nykyisen järjestyksen ympäri
+print("\nreverse(): käännetään nykyinen järjestys ympäri")
+languages.reverse()
+print(languages)
+
+# len() – laskee montako alkiota listassa on
+print(f"\nLopuksi listassa on {len(languages)} ohjelmointikieltä.")
+
+
