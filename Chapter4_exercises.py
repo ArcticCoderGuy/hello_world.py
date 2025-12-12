@@ -69,5 +69,10 @@ for value in range(1, 11):
     
 print(squares)       
 
+#Assingment 4-3: print numbers 1-20
+for number in range(1, 21):
+    print(number)           
+        
+# Assingment 4-4: One million   
 
-
+ 
