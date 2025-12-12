@@ -17,6 +17,7 @@ for magician in magicians:
     
 print("Thank you, everyone. That was such a great magic show!") # And I did indet this line to be outside the for-loop, as instructuion says.
 
+
 # Page 56 - 4-1: Pizzas
 
 pizzas = ['Margherita', 'Pepperoni', 'Hawaiian']        
@@ -27,7 +28,10 @@ for pizza in pizzas:
  
 print("\nI really love all of these pizzas!")  # Indented outside the for-loop.
 
+
+
 #Page 56 - 4-2: Animals
+
 animals = ['dog', 'cat', 'rabbit']
 for animal in animals:
     print(f"A {animal} would make a great pet.")        
