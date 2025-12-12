@@ -26,3 +26,12 @@ for pizza in pizzas:
     
  
 print("\nI really love all of these pizzas!")  # Indented outside the for-loop.
+
+#Page 56 - 4-2: Animals
+animals = ['dog', 'cat', 'rabbit']
+for animal in animals:
+    print(f"A {animal} would make a great pet.")        
+
+print("\nAny of these animals would make a great pet!")  # Indented outside the for-loop.
+
+
