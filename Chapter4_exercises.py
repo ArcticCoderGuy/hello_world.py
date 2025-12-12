@@ -77,12 +77,36 @@ for number in range(1, 21):
 # that I have commented the print(number)-line below to avoid flooding the output. Hope that's ok
 
 
-numbers = list(range(1, 1000001))
-
+numbers = list(range(1, 10000))
 for number in numbers:
-    #git add .print(number)
+    print(number)
     
     
+#Page 62 <bd looping through a slice
 
+hockey_players = ['Wayne Gretzky', 'Kimmo Timonen', 'Mikko Rantanen', 'Jari Kurri', 'Jaromir Jagr']
+print(hockey_players[:3])
 
+print("\nHere are the first three hockey players on my list:")
  
+
+# Task from page 65 - 4-10: Slices 
+
+
+hockey_players = ['Wayne Gretzky', 'Kimmo Timonen', 'Mikko Rantanen', 'Jari Kurri', 'Jaromir Jagr']
+
+# First three, :3
+print("The first three players in the list are:")
+for player in hockey_players[:3]:
+    print(f"\t{player}")
+
+# 1,2,3 from the middle,1:4
+print("\nThree players from the middle of the list are:")
+for player in hockey_players[1:4]:
+    print(f"\t{player}")
+
+# Last three, -3:
+print("\nThe last three players in the list are:")
+for player in hockey_players[-3:]:
+    print(f"\t{player}")
+
