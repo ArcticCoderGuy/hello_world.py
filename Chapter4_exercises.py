@@ -110,3 +110,37 @@ print("\nThe last three players in the list are:")
 for player in hockey_players[-3:]:
     print(f"\t{player}")
 
+# page 67 - 4-13 : Buffet
+
+# page 67 - 4-13 : Buffet
+
+# Alkuperäinen buffet-lista – TUPLE (ei voi muuttaa yksittäisiä alkioita)
+buffet_foods = (
+    "Manhattan strip steak",
+    "Spaghetti Tartufo",
+    "Lasagne",
+    "Sushi",
+    "Big Mac",
+)
+
+print("The buffet offers the following foods:")
+for food in buffet_foods:
+    print(f"\t{food}")
+
+# Yritetään muuttaa yhtä alkiota – tämä aiheuttaisi virheen:
+# TypeError: 'tuple' object does not support item assignment
+# Poista kommenttimerkki riviltä alta jos haluat nähdä virheen:
+# buffet_foods[0] = "Caesar salad"
+
+# Päivitetty buffet – luodaan KOKO TUPLE uudestaan (näin sitä "muutetaan")
+buffet_foods = (
+    "Manhattan strip steak",
+    "Spaghetti Tartufo",
+    "Lasagne",
+    "Sushi platter",
+    "Vegan Buddha Bowl",
+)
+
+print("\nThe buffet menu has now been updated:")
+for food in buffet_foods:
+    print(f"\t{food}")
