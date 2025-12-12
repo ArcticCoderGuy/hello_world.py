@@ -73,6 +73,16 @@ print(squares)
 for number in range(1, 21):
     print(number)           
         
-# Assingment 4-4: One million   
+# Assingment 4-4: One million and NOTIFY 
+# that I have commented the print(number)-line below to avoid flooding the output. Hope that's ok
+
+
+numbers = list(range(1, 1000001))
+
+for number in numbers:
+    #git add .print(number)
+    
+    
+
 
  
