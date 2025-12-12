@@ -58,6 +58,16 @@ print(even_numbers)
 squares = []
 for value in range(1, 11):
     square = value ** 2
+    squares.append(square)   
+    
+# Page 58 - squares - more concise version
+
+squares = []
+for value in range(1, 11):
+    square = value ** 3
     squares.append(square)      
+    
+print(squares)       
+
 
 
