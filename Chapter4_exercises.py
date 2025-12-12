@@ -38,4 +38,26 @@ for animal in animals:
 
 print("\nAny of these animals would make a great pet!")  # Indented outside the for-loop.
 
+#Page 57 - first numbers.py example
+
+for value in range(1, 6):
+    print(value)
+    
+# Page 58 - second numbers.py example using range() to make a list
+
+numbers = list(range(1, 6))
+print(numbers)
+
+
+# Page 58 - third numbers.py example using range() with different step values       
+even_numbers = list(range(2, 11, 2))
+print(even_numbers)
+
+
+# Page 59 - fourth numbers.py example - squares of numbers
+squares = []
+for value in range(1, 11):
+    square = value ** 2
+    squares.append(square)      
+
 
