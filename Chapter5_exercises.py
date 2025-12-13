@@ -107,8 +107,50 @@ print("\nTest 10: Is os != 'linux'? I predict False.")
 print(os != 'linux')     # False
 
 
-# 5-2 More Conditional tests on page 78
+# 5-2 More Conditional tests on page 78 and at least one True/False on every category
 
+car = 'audi'
+os = 'linux'
+age = 21
+height_cm = 185
+allowed_oses = ['linux', 'macOS', 'FreeBSD']
+
+# 1) Equality ja inequality merkkijonoilla
+print("== ja != stringeillä")
+print("car == 'audi'? ->", car == 'audi')      # True
+print("car != 'bmw'?  ->", car != 'bmw')       # True
+print("car == 'Audi'? ->", car == 'Audi')      # False (case-sensitive)
+
+# 2) lower() metodin käyttö
+print("\nlower() tests")
+print("car.lower() == 'audi'? ->", car.lower() == 'audi')   # True
+print("car.lower() == 'AUDI'? ->", car.lower() == 'AUDI')   # False
+
+# 3) Numeeriset testit: ==, !=, >, <, >=, <=
+print("\nNumeric tests")
+print("age == 21?   ->", age == 21)            # True
+print("age != 30?   ->", age != 30)            # True
+print("age > 18?    ->", age > 18)             # True
+print("age < 18?    ->", age < 18)             # False
+print("height >= 180? ->", height_cm >= 180)   # True
+print("height <= 180? ->", height_cm <= 180)   # False
+
+# 4) and / or
+print("\nLogical and / or")
+print("age > 18 AND height > 180? ->", age > 18 and height_cm > 180)   # True
+print("age < 18 AND height > 180? ->", age < 18 and height_cm > 180)   # False
+print("age > 18 OR height < 150?  ->", age > 18 or height_cm < 150)    # True
+print("age < 18 OR height < 150?  ->", age < 18 or height_cm < 150)    # False
+
+# 5) Onko alkio listassa (in)
+print("\nMembership: in")
+print("'linux' in allowed_oses?   ->", 'linux' in allowed_oses)    # True
+print("'windows' in allowed_oses? ->", 'windows' in allowed_oses)  # False
+
+# 6) Ei ole listassa (not in)
+print("\nMembership: not in")
+print("'windows' not in allowed_oses? ->", 'windows' not in allowed_oses)  # True
+print("'linux' not in allowed_oses?   ->", 'linux' not in allowed_oses)    # False
 
  
 
