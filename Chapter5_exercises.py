@@ -156,6 +156,23 @@ print("'linux' not in allowed_oses?   ->", 'linux' not in allowed_oses)    # Fal
 # Page 78 and voting.py 
 
 age = 19 
-if age >= 18:
+if age == 18:
     print("You are old enough to vote")
 
+# The if-elif-else chain page 80 -> amusement park example 
+
+age = 32
+
+if age < 4:
+    print("Your admission cost is of 0 EUR.")
+
+elif age > 18:
+    print("Your admission cost is 25 EUR")
+
+else:
+   print("your admission is 250 EUR, because we can !")
+
+        
+
+
+ 
