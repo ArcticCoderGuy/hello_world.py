@@ -22,8 +22,24 @@ we_want = 'Linux'
 we_do_not_want = 'Windows Vista'
     
 if we_want != we_do_not_want:
-    print(f"hold the {we_do_not_want.upper()} !! ")
+    print(f"Hold the {we_do_not_want.upper()} !! ")
     
+    
+    
+# Paga 74 magic_number.py x 2 tasks
+
+answer = 17
+if answer != 42:
+    print(f" If the {answer} is your age, Register to vote next year")
+    
+answer = 21
+if answer != 31:
+    print(f" On if you are {answer} old, that is the only age you get the Rhum-Cola in this bar")
+    
+    
+     
+    
+       
         
 
 
