@@ -225,7 +225,7 @@ for username in usernames:
 
 usernames = ['admin', 'markus', 'maria', 'ville', 'guest']
 
-# Tyhjennetään lista tarkoituksella:
+
 usernames.clear()
 
 if usernames:
@@ -236,3 +236,7 @@ if usernames:
             print(f"Hello {username.title()}, thank you for logging in again.")
 else:
     print("We need to find some users!")
+
+
+# Task 5-10 Checking Usernames 
+ 
