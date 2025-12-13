@@ -152,5 +152,10 @@ print("\nMembership: not in")
 print("'windows' not in allowed_oses? ->", 'windows' not in allowed_oses)  # True
 print("'linux' not in allowed_oses?   ->", 'linux' not in allowed_oses)    # False
 
- 
+
+# Page 78 and voting.py 
+
+age = 19 
+if age >= 18:
+    print("You are old enough to vote")
 
