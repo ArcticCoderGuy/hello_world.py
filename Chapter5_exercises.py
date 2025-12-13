@@ -175,4 +175,20 @@ else:
         
 
 
- # Task 5-3 on page 84 
+ # Task 5-3 on page 84 - Alien colors 
+ 
+ 
+
+# Version 1:
+alien_color = 'green'
+
+if alien_color == 'green':
+    print("Version 1: You just earned 5 points for shooting the green alien!")
+
+
+# Version 2: 
+alien_color = 'yellow'
+
+if alien_color == 'green':
+    print("Version 2: You just earned 5 points for shooting the green alien!")
+
