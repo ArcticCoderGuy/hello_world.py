@@ -52,11 +52,17 @@ banned_users = ['andrew','caroline','Gerenimo']
 user = 'marie'
 
 if user not in banned_users:
-print(f"{user.title()}, you can post on Twitter if you wish")
+    print(f"{user.title()}, you can post on Twitter if you wish")
 
         
        
         
 
+# Task 5-1 conditional tests, page 77 
 
+car = 'subaru'
+print("Is car == 'Subaru' ? I predict True.")
+print(car == 'subaru')
 
+print ("\nIs car == 'audi' ? I predict False.")
+print("car == audi")
