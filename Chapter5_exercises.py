@@ -57,7 +57,6 @@ if user not in banned_users:
         
        
         
-
 # Task 5-1 conditional tests, page 77 
 
 car = 'subaru'
@@ -66,3 +65,45 @@ print(car == 'subaru')
 
 print ("\nIs car == 'audi' ? I predict False.")
 print("car == audi")
+
+# Task 5-1: Conditional tests – at least 10 tests
+# We want at least 5 tests == True and at least 5 == False
+
+
+# Task 5-1: Conditional tests – at least 10 tests
+# We want at least 5 tests == True and at least 5 == False
+
+car = 'subaru'
+os = 'linux'
+age = 21
+
+print("Test 1: Is car == 'subaru'? I predict True.")
+print(car == 'subaru')   # True
+
+print("\nTest 2: Is car == 'audi'? I predict False.")
+print(car == 'audi')     # False
+
+print("\nTest 3: Is car != 'bmw'? I predict True.")
+print(car != 'bmw')      # True
+
+print("\nTest 4: Is car == 'Subaru'? (case-sensitive) I predict False.")
+print(car == 'Subaru')   # False
+
+print("\nTest 5: Is car.lower() == 'subaru'? I predict True.")
+print(car.lower() == 'subaru')   # True
+
+print("\nTest 6: Is age == 21? I predict True.")
+print(age == 21)         # True
+
+print("\nTest 7: Is age < 18? I predict False.")
+print(age < 18)          # False
+
+print("\nTest 8: Is age >= 18? I predict True.")
+print(age >= 18)         # True
+
+print("\nTest 9: Is os == 'Windows'? I predict False.")
+print(os == 'Windows')   # False
+
+print("\nTest 10: Is os != 'linux'? I predict False.")
+print(os != 'linux')     # False
+
