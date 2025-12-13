@@ -37,7 +37,11 @@ if answer != 31:
     print(f" On if you are {answer} old, that is the only age you get the Rhum-Cola in this bar")
     
     
-     
+markuksen_kotikaupunki = "Matinkylä"
+
+if markuksen_kotikaupunki == "Matinkylä":
+    print(f"Siellä oli kiva asua lapsena, koska {markuksen_kotikaupunki.upper()} oli lapsiperheille kiva paikka asua 1980-luvulla")
+         
     
        
         
