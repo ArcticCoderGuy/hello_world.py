@@ -253,3 +253,19 @@ for new_user in new_users:
         print(f"Sorry, the username '{new_user}' is already taken. Please choose another one.")
     else:
         print(f"Great, the username '{new_user}' is available!")
+
+# 5-11: Ordinal Numbers
+
+numbers = list(range(1, 10))
+
+for number in numbers:
+    if number == 1:
+        ending = "st"
+    elif number == 2:
+        ending = "nd"
+    elif number == 3:
+        ending = "rd"
+    else:
+        ending = "th"
+    
+    print(f"{number}{ending}")
