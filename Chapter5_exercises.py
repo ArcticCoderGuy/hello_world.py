@@ -70,8 +70,7 @@ print("car == audi")
 # We want at least 5 tests == True and at least 5 == False
 
 
-# Task 5-1: Conditional tests – at least 10 tests
-# We want at least 5 tests == True and at least 5 == False
+#10 tests and at least 5 tests == True and at least 5 == False
 
 car = 'subaru'
 os = 'linux'
@@ -106,4 +105,10 @@ print(os == 'Windows')   # False
 
 print("\nTest 10: Is os != 'linux'? I predict False.")
 print(os != 'linux')     # False
+
+
+# 5-2 More Conditional tests on page 78
+
+
+ 
 
