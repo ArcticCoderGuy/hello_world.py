@@ -238,5 +238,18 @@ else:
     print("We need to find some users!")
 
 
-# Task 5-10 Checking Usernames 
+
  
+ # 5-10: Checking Usernames
+
+current_users = ["markus", "admin", "maria", "ville", "sari"]
+new_users = ["Markus", "teppo", "ADMIN", "Aada", "ville"]
+
+
+current_users_lower = [user.lower() for user in current_users]
+
+for new_user in new_users:
+    if new_user.lower() in current_users_lower:
+        print(f"Sorry, the username '{new_user}' is already taken. Please choose another one.")
+    else:
+        print(f"Great, the username '{new_user}' is available!")
