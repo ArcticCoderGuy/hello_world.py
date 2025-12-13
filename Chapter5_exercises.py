@@ -166,7 +166,7 @@ age = 32
 if age < 4:
     print("Your admission cost is of 0 EUR.")
 
-elif age > 18:
+elif age < 18:
     print("Your admission cost is 25 EUR")
 
 else:
