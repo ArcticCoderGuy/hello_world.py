@@ -29,6 +29,30 @@ print(cabin_in_yllas)
 
 
 
+# Now we make a larger task that is applied to the same manner as in the book, in page 95
+
+# on the book it is coded like this: 
+
+alien_0 = {'x_position' : 0, 'y_position' : 25, 'speed' : 'medium' }  
+print(f"Original position: {alien_0['x_position']}")
+
+if alien_0['speed'] == 'slow':
+    x_increment = 1
+
+elif alien_0['speed'] == 'medium':
+    x_increment = 2
+    
+else:
+    # You are out of luck Bro and your ass is toasted !!
+    x_increment = 14
+
+#The new position is the old position plus the increment.
+
+alien_0['x_position'] = alien_0['x_position'] + x_increment
+
+print(f"New Position on the alien is: {alien_0['x_position']}")
+
+
 
 
 
