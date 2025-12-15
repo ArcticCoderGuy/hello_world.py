@@ -54,6 +54,18 @@ print(f"New Position on the alien is: {alien_0['x_position']}")
 
 
 
+ # made a task 6-1 on the page 98 to see how I would do this
+ 
+The_wife = {'first_name': 'Heidi', 'Surname':'Kaprio', 'Age': 25, 'domecile': 'Tornio' }
+ 
+print(The_wife['first_name'])
+print(The_wife['Surname'])
+print(The_wife['Age'])
+print(The_wife['domecile'])
+ 
+ 
+
+
 
 
 
