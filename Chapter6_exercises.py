@@ -12,8 +12,11 @@ print(alien_0['points'])
 
 #My own example
 
-cabin_in_ylläs = {'made out of': 'wood'}
-print(cabin_in_ylläs['made out of'])
+cabin_in_yllas = {'made out of': 'wood', 
+                  'Log-type': 'Spruce' }
+print(cabin_in_yllas['made out of'])
+print(cabin_in_yllas['Log-type'])
+
 
 
 
