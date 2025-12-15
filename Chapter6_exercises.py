@@ -68,13 +68,17 @@ print(The_wife['domecile'])
  # Loopin on page 99 - 101, user.py
  
 user_0 = {
-    'username' = 'efermi'
-    'first name' = 'Enrico'
-    'surname'   = 'Fermi'
+    'username': 'efermi',
+    'first name': 'Enrico',
+    'surname': 'Fermi'
     }
 
 
-  
+for key, value in user_0.items():
+    print(f"\nkey: {key}")
+    print(f"Value: {value}")
+          
+          
 
 
 
