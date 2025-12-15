@@ -64,6 +64,17 @@ print(The_wife['Age'])
 print(The_wife['domecile'])
  
  
+ 
+ # Loopin on page 99 - 101, user.py
+ 
+user_0 = {
+    'username' = 'efermi'
+    'first name' = 'Enrico'
+    'surname'   = 'Fermi'
+    }
+
+
+  
 
 
 
