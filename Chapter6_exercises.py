@@ -33,7 +33,7 @@ print(cabin_in_yllas)
 
 # on the book it is coded like this: 
 
-alien_0 = {'x_position' : 0, 'y_position' : 25, 'speed' : 'medium' }  
+alien_0 = {'x_position' : 0, 'y_position' : 25, 'speed' : 'high' }  
 print(f"Original position: {alien_0['x_position']}")
 
 if alien_0['speed'] == 'slow':
