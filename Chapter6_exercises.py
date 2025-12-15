@@ -8,8 +8,12 @@ alien_0 = {'color' : 'green' , 'points': 5}
 
 print(alien_0['color'])
 print(alien_0['points'])
-              
-              
-              
-               
+
+
+#My own example
+
+cabin_in_ylläs = {'made out of': 'wood'}
+print(cabin_in_ylläs['made out of'])
+
+
 
