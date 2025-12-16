@@ -146,5 +146,23 @@ for language in favourite_languages.values():
     
     
 
+# PAge 105 tasks 6-5 & 6-6 
 
+world_rivers = { 
+    'Amazon': 'Brazil',
+    'Tornion joki' : 'Lappi',
+    'Donau': 'Hungary'
+}
 
+for river, country in world_rivers.items():
+    print(f"\n The {river} is running through {country}.")
+    
+    
+    
+    
+print("\Rivers:")
+for river in world_rivers.keys():
+    print(river)
+    
+    
+    
