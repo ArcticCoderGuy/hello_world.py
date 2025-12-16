@@ -160,14 +160,28 @@ for river, country in world_rivers.items():
     
     
     
-print("\Rivers:")
+print("\n\tRivers:")
 for river in world_rivers.keys():
     print(river)
 
 
     
-print("\nCountries/regions:")
+print("\n\tCountries/regions:")
 for country in world_rivers.values():
     print(country)
     
+favourite_languages = {
+    'jen': 'python',
+    'sarah': 'c',
+    'edward': 'rust',
+    'phil': 'python'
+}
+
+people = ['jen', 'markus', 'phil', 'anna', 'edward']
+
+for name in people:
+    if name in favourite_languages:
+        print(f"{name.title()}, thanks for responding!")
+    else:
+        print(f"{name.title()}, please take the poll!")
     
