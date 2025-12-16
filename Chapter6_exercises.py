@@ -114,7 +114,7 @@ for pair in favourite_languages.items():
     print("DEBUG:", pair, type(pair))
 
 
-# Page 103 
+# Page 103 sorted()-method
 
 favourite_languages = {
     'Jen': 'Python',
@@ -129,6 +129,22 @@ for name in sorted (favourite_languages.keys()):
 
 
 
+# Page 103 Continued values()-method
+
+
+favourite_languages = {
+    'Jen': 'Python',
+    'John': 'Rust',
+    'Edward': 'HTML',
+    'Phil': 'Javascript'
+            
+}
+
+print("the following languages have been mentioned:")
+for language in favourite_languages.values(): 
+    print(language.title())
+    
+    
 
 
 
