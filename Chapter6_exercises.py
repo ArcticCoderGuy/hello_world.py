@@ -79,6 +79,7 @@ for key, value in user_0.items():
     print(f"Value: {value}")
 
 
+
 #  Page 101 task 
 
 favourite_languages = {
@@ -89,8 +90,9 @@ favourite_languages = {
             
 }
 
-for name in favourite_languages.keys():
-    print(name.title())
+for name in favourite_languages.items():
+    print(f"{name.title()}´s favourite language is {languages.title()}.")
+
     
     
 
