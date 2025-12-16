@@ -163,6 +163,11 @@ for river, country in world_rivers.items():
 print("\Rivers:")
 for river in world_rivers.keys():
     print(river)
+
+
     
+print("\nCountries/regions:")
+for country in world_rivers.values():
+    print(country)
     
     
