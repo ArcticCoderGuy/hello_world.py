@@ -67,14 +67,14 @@ print(The_wife['domecile'])
  
  # Loopin on page 99 - 101, user.py
  
-    user_0 = {
+user_0 = {
         'username': 'efermi',
         'first name': 'Enrico',
         'surname': 'Fermi'
         }
 
 
-    for key, value in user_0.items():
+for key, value in user_0.items():
         print(f"\nkey: {key}")
         print(f"Value: {value}")
 
@@ -114,7 +114,18 @@ for pair in favourite_languages.items():
     print("DEBUG:", pair, type(pair))
 
 
+# Page 103 
 
+favourite_languages = {
+    'Jen': 'Python',
+    'John': 'Rust',
+    'Edward': 'HTML',
+    'Phil': 'Javascript'
+            
+}
+
+for name in sorted (favourite_languages.keys()):
+    print(f"{name.title()}, Thank you for taking hte poll.")
 
 
 
