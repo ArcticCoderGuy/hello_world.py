@@ -77,9 +77,23 @@ user_0 = {
 for key, value in user_0.items():
     print(f"\nkey: {key}")
     print(f"Value: {value}")
-          
-          # 
-          
+
+
+#  Page 101 task 
+
+favourite_languages = {
+    'Jen': 'Python',
+    'John': 'Rust',
+    'Edward': 'HTML',
+    'Phil': 'Javascript'
+            
+}
+
+for name in favourite_languages.keys():
+    print(name.title())
+    
+    
+
 
 
 
