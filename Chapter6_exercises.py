@@ -67,16 +67,17 @@ print(The_wife['domecile'])
  
  # Loopin on page 99 - 101, user.py
  
-user_0 = {
-    'username': 'efermi',
-    'first name': 'Enrico',
-    'surname': 'Fermi'
-    }
+    user_0 = {
+        'username': 'efermi',
+        'first name': 'Enrico',
+        'surname': 'Fermi'
+        }
 
 
-for key, value in user_0.items():
-    print(f"\nkey: {key}")
-    print(f"Value: {value}")
+    for key, value in user_0.items():
+        print(f"\nkey: {key}")
+        print(f"Value: {value}")
+
 
 
 
@@ -90,11 +91,28 @@ favourite_languages = {
             
 }
 
-for name in favourite_languages.items():
-    print(f"{name.title()}´s favourite language is {languages.title()}.")
+for name, language in favourite_languages.items():
+    print(f"{name.title()}´s favourite language is {language.title()}.")
+    
+    
+# Page 101 Task 
 
+favourite_languages = {
+    'Jen': 'Python',
+    'John': 'Rust',
+    'Edward': 'HTML',
+    'Phil': 'Javascript'
+            
+}
+
+for name in favourite_languages.keys():
+    print(name.title())
     
+# For me to remember: Dict = key -> value, items) antaa (key, value) pareina
     
+for pair in favourite_languages.items():
+    print("DEBUG:", pair, type(pair))
+
 
 
 
