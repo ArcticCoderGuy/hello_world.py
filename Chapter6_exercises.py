@@ -185,3 +185,62 @@ for name in people:
     else:
         print(f"{name.title()}, please take the poll!")
     
+    
+# Page 111 tas 6-7 People
+
+# 6-7 People
+
+person_1 = {
+    "first_name": "Markus",
+    "last_name": "Kaprio",
+    "age": 50,
+    "city": "Tornio"
+}
+
+person_2 = {
+    "first_name": "Jen",
+    "last_name": "Smith",
+    "age": 28,
+    "city": "Helsinki"
+}
+
+person_3 = {
+    "first_name": "Phil",
+    "last_name": "Johnson",
+    "age": 35,
+    "city": "Oulu"
+}
+
+people = [person_1, person_2, person_3]
+
+for person in people:
+    full_name = f"{person['first_name']} {person['last_name']}"
+    print(f"\nName: {full_name}")
+    print(f"Age: {person['age']}")
+    print(f"City: {person['city']}")
+
+
+# Page 111 task 6-8 
+
+# 6-8 Pets
+
+pet_1 = {
+    "animal": "dog",
+    "owner": "Markus"
+}
+
+pet_2 = {
+    "animal": "cat",
+    "owner": "Jen"
+}
+
+pet_3 = {
+    "animal": "hamster",
+    "owner": "Phil"
+}
+
+pets = [pet_1, pet_2, pet_3]
+
+for pet in pets:
+    print(f"\nAnimal: {pet['animal'].title()}")
+    print(f"Owner: {pet['owner'].title()}")
