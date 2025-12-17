@@ -2,4 +2,42 @@
 
 
 
+# colonyx_ch7_pipeline_demo.py
+# Matthes Ch.7 style + McKinney pipeline thinking (no notebooks needed)
+
+from datetime import datetime
+
+# ---------- 1) USER INPUT (Matthes Ch.7 muscle) ----------
+def ask_symbols():
+    print("ColonyX Demo — select instruments (type 'done' to finish).")
+    symbols = []
+
+    while True:
+        s = input("Add symbol (e.g. EURUSD, XAUUSD): ").strip().upper()
+        if s == "DONE":
+            break
+        if not s:
+            print("Empty input — try again.")
+            continue
+        if s in symbols:
+            print("Already added.")
+            continue
+        symbols.append(s)
+
+    return symbols
+
+
+# ---------- 2) INGEST (raw data, no intelligence) ----------
+def ingest_mock(symbols):
+    """
+    Returns raw market events as a list of dicts.
+    Notice: this data is intentionally a bit messy to show CLEAN step.
+    """
+    raw = [
+        {"timestamp": "2025-12-17 10:00:00", "symbol": "EURUSD", "open": 1.1000, "high": 1.1008, "low": 1.0996, "close": 1.1005, "volume": 120},
+        {"timestamp": "2025-12-17 10:01:00", "symbol": "EURUSD", "open": 1.1005, "high": 1.1010, "low": 1.1002, "close": 1.1001, "volume": 95},
+        {"timestamp": "2025-12-17 10:00:00", "symbol": "XAUUSD", "open": 2045.2, "high": 2045.8, "low": 2044.9, "close": 2045.6, "volume": 33},
+
+        # Messy rows (for CLEAN step demo)
+        {"timestamp": "2025-12-17 10:01:00", "sy
 
