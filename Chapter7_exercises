@@ -23,6 +23,26 @@ else:
     print("\n\tYou are just too friggin´weird") 
     
     
+# Task 7-1 rental-task
+
+rental_car = input(" Welcome to the Yellow Guy rental company, what car would you like:" )
+print(f"\n So you want {rental_car} as your rental car, let me see if I can find you a {rental_car} ")
+
+# 7 -2 Restaurant-task
+
+dinner_placing = input("Please state how many people will be coming today ? ")
+
+dinner_placing = int(dinner_placing)
+
+if dinner_placing <= 8:
+    print("you are welcome to be seated immediately at our restaurant")
+ 
+else:
+    print("I am sorry, but as you guys are more than 8, we need to make arrangements to sit all of you guys")   
+
+
+    
+    
 
 
 
