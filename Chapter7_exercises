@@ -8,14 +8,17 @@ print(greeting)
 
 # Task rollercoaster.py 
 
-height = input(" how tall are you in inches: ")
+height = input(" how tall are you in the metric system: ")
 height = int(height)
 
-if height >= 48:
+if height >= 150:
     print("\nYou are tall enough to ride")
     
+elif height <= 200:
+    print("\nYou are too darn tall dude")
+
 else:
-    print("\n\tWhen you get taller, then come back short-stuff !!")
+    print("\n\tYou are just too friggin´weird") 
     
     
 
