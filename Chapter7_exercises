@@ -39,5 +39,170 @@ def ingest_mock(symbols):
         {"timestamp": "2025-12-17 10:00:00", "symbol": "XAUUSD", "open": 2045.2, "high": 2045.8, "low": 2044.9, "close": 2045.6, "volume": 33},
 
         # Messy rows (for CLEAN step demo)
-        {"timestamp": "2025-12-17 10:01:00", "sy
+        {"timestamp": "2025-12-17 10:01:00", "symbol": "XAUUSD", "open": 2045.6, "high": 2045.6, "low": 2046.2, "close": 2045.1, "volume": 20},  # low > high (invalid)
+        {"timestamp": "BROKEN_TIMESTAMP", "symbol": "EURUSD", "open": 1.1, "high": 1.1, "low": 1.1, "close": 1.1, "volume": 10},  # invalid timestamp
+    ]
 
+    # Filter only requested symbols
+    return [row for row in raw if row.get("symbol") in symbols]
+
+
+# ---------- 3) NORMALIZE (unified schema & time structure) ----------
+def normalize(raw_rows):
+    """
+    - Parse timestamp into datetime
+    - Ensure required keys exist
+    - Keep a consistent schema
+    """
+    normalized = []
+    required = ["timestamp", "symbol", "open", "high", "low", "close", "volume"]
+
+    for row in raw_rows:
+        # Ensure keys exist
+        if not all(k in row for k in required):
+            row["__error__"] = "missing_keys"
+            normalized.append(row)
+            continue
+
+        # Parse timestamp
+        try:
+            ts = datetime.strptime(row["timestamp"], "%Y-%m-%d %H:%M:%S")
+        except ValueError:
+            row["__error__"] = "bad_timestamp"
+            normalized.append(row)
+            continue
+
+        normalized.append({
+            "timestamp": ts,
+            "symbol": row["symbol"],
+            "open": float(row["open"]),
+            "high": float(row["high"]),
+            "low": float(row["low"]),
+            "close": float(row["close"]),
+            "volume": int(row["volume"]),
+        })
+
+    # Sort for deterministic processing
+    normalized.sort(key=lambda r: (r.get("symbol", ""), r.get("timestamp", datetime.min)))
+    return normalized
+
+
+# ---------- 4) CLEAN (errors, gaps, anomalies) ----------
+def clean(rows):
+    cleaned = []
+    rejects = []
+
+    for r in rows:
+        if "__error__" in r:
+            rejects.append((r, r["__error__"]))
+            continue
+
+        # Basic sanity checks
+        if r["low"] > r["high"]:
+            rejects.append((r, "low_gt_high"))
+            continue
+        if r["volume"] < 0:
+            rejects.append((r, "negative_volume"))
+            continue
+
+        cleaned.append(r)
+
+    return cleaned, rejects
+
+
+# ---------- 5) FEATURE CELL (deterministic features) ----------
+def compute_features(cleaned_rows):
+    """
+    Features per row:
+    - range = high-low
+    - return = close - prev_close (per symbol)
+    """
+    prev_close = {}
+    featured = []
+
+    for r in cleaned_rows:
+        sym = r["symbol"]
+        rng = r["high"] - r["low"]
+
+        if sym in prev_close:
+            ret = r["close"] - prev_close[sym]
+        else:
+            ret = 0.0  # first row has no previous
+
+        prev_close[sym] = r["close"]
+
+        featured.append({
+            **r,
+            "range": rng,
+            "return": ret,
+        })
+
+    return featured
+
+
+# ---------- 6) TRIAGE (decision / classification / confidence) ----------
+def triage(featured_rows):
+    """
+    Simple triage rule (placeholder):
+    - tradeable if range > threshold and abs(return) > threshold2
+    - confidence based on range and return magnitude
+    """
+    decisions = []
+
+    for r in featured_rows:
+        sym = r["symbol"]
+
+        # per-instrument thresholds (example)
+        if sym == "XAUUSD":
+            range_threshold = 0.6
+            return_threshold = 0.2
+        else:
+            range_threshold = 0.0008
+            return_threshold = 0.0003
+
+        tradeable = (r["range"] >= range_threshold) and (abs(r["return"]) >= return_threshold)
+
+        # crude confidence score (0..1-ish)
+        confidence = min(1.0, (r["range"] / (range_threshold * 2)) + (abs(r["return"]) / (return_threshold * 3)))
+
+        decisions.append({
+            "timestamp": r["timestamp"],
+            "symbol": sym,
+            "tradeable": tradeable,
+            "confidence": round(confidence, 3),
+            "notes": "rule-based triage (demo)",
+        })
+
+    return decisions
+
+
+# ---------- 7) ACTION / LOG ----------
+def log_results(decisions, rejects):
+    print("\n--- ACTION / LOG ---")
+    for d in decisions:
+        ts = d["timestamp"].strftime("%Y-%m-%d %H:%M:%S")
+        status = "TRADEABLE" if d["tradeable"] else "NOT_TRADEABLE"
+        print(f"{ts} | {d['symbol']} | {status} | confidence={d['confidence']} | {d['notes']}")
+
+    if rejects:
+        print("\n--- REJECTS (cleaning) ---")
+        for row, reason in rejects:
+            print(f"REJECT reason={reason} row={row}")
+
+
+def main():
+    symbols = ask_symbols()
+    if not symbols:
+        print("No symbols selected. Exiting.")
+        return
+
+    raw = ingest_mock(symbols)
+    normalized = normalize(raw)
+    cleaned, rejects = clean(normalized)
+    featured = compute_features(cleaned)
+    decisions = triage(featured)
+    log_results(decisions, rejects)
+
+
+if __name__ == "__main__":
+    main()
